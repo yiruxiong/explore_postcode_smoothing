@@ -1,0 +1,5 @@
+h3>=4.0
+pgeocode>=0.4
+pandas>=1.5
+numpy>=1.23
+scipy>=1.9
