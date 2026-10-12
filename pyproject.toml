@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "postcode-smoother"
+version = "0.1.0"
+description = "Lightweight UK postcode smoothing for motor insurance using H3 hexagonal grids"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["postcode", "smoothing", "H3", "motor insurance", "geospatial"]
+dependencies = [
+    "h3>=4.0",
+    "pgeocode>=0.4",
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "scipy>=1.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["postcode_smoother*"]
